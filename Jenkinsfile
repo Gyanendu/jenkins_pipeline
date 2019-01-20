@@ -28,5 +28,13 @@ pipeline {
                 }
             }
         }
+    node {
+    stage('Get approval'){
+    input "Deploy to prod?"
+    }
+    stage('deploy to prod'){
+        echo "deploying to prod"
+    }   
+ }
     }
 }
