@@ -29,12 +29,8 @@ pipeline {
             }
         }
 }		
-    node {
-		stage('Get approval'){
-			input "Deploy to prod?"
-		}
-		stage('deploy to prod'){
-			echo "deploying to prod"
-		}   
-	}
-    }
+node {
+    stage('deploy to qa'){
+        echo "deploying"
+   }
+}
